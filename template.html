@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+  <script>
+    // Your JavaScript goes here!
+    let moves = ["rock", "scissors", "paper" ]; 
+
+    function computerPlay(){
+      let r = Math.floor(Math.random() * 3);
+      return moves[r];
+    }
+      
+    function rules(m1,m2) {
+      if (m1 == m2)  
+          return "Draw.";
+          
+      else if (m1 == "rock" ) { 
+          if (m2 == "paper") 
+              return "You lose! Paper beats rock.";
+             
+          if (m2 == "scissors") 
+              return "You win! Rock beats scissors."; 
+      }
+          
+      else if (m1 == "paper") {
+          if (m2 == "scissors") 
+              return "You lose! Scissors beats paper.";
+            
+          if (m2 == "rock") 
+              return "You win! Paper beats rock.";
+      }
+          
+      else if (m1 == "scissors") {
+          if (m2 == "paper") 
+              return "You win! Scissors beats paper.";
+            
+          if (m2 == "rock") 
+              return "You lose! Rock beats scissors." ;
+     }
+      else {
+           return "Not a valid move.";
+      }
+    }
+
+    for (i = 0; i<5; i++) {
+      var userInput = prompt("Rock, paper or scissors??"); 
+      var lcInput = userInput.toLowerCase(); 
+      console.log(rules(lcInput, computerPlay()));
+    } 
+
+        
+  </script>
+</body>
+</html>
