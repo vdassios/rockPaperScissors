@@ -1,4 +1,5 @@
 # Rock Paper Scissors
 
-Simple rock paper scissors game interface
-[Preview here](https://vdassios.github.io/rockPaperScissors/)
+Play a game of rock, paper, scissors against the computer.
+[Try it here](https://vdassios.github.io/rockPaperScissors/)
+![Preview](preview.png)
